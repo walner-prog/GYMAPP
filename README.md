@@ -41,7 +41,7 @@ La página incluye 6 capturas del sistema (`gym1.png` hasta `gym6.png`) mostrand
 
 ## 📞 Contacto
 
-Para adquirir **GYMAPP** o solicitar una demo:
+Para adquirir **GYMAPP**:
 
 - **📱 WhatsApp:** 8542 9144
 - **📩 Email :** ca140611@gmail.com.com 
