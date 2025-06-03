@@ -1,128 +1,580 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GymApp - Sistema para Gimnasios</title>
-   <!-- Favicon temporal con emoji -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏋️‍♂️</text></svg>">
-
+    <!-- Favicon temporal con emoji -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏋️‍♂️</text></svg>"
+    />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <!-- Framer Motion CDN -->
     <script src="https://unpkg.com/motion"></script>
 
     <!-- Font Awesome para iconos temporales -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <style>
-        /* Extra iluminación para las imágenes */
-        .img-glow {
-            box-shadow: 0 10px 30px rgba(0, 255, 128, 0.4), 0 0 20px rgba(0, 255, 128, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+      .custom-img {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 255, 128, 0.4),
+          0 0 20px rgba(0, 255, 128, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
 
-        .img-glow:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 40px rgba(0, 255, 128, 0.6);
-        }
+      .custom-img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 15px 40px rgba(0, 255, 128, 0.6);
+      }
+
+      .image-box {
+        overflow: hidden;
+        border-radius: 1rem;
+        background: linear-gradient(to bottom right, #0f172a, #0a0f1f);
+        padding: 12px;
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white font-sans">
-
+  <body
+    class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white font-sans"
+  >
     <!-- Hero -->
     <section class="text-center py-20 px-4 animate__animated animate__fadeIn">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            ¡Control total de tu gimnasio <span class="text-green-400">sin internet</span>!
-            <!-- Ícono visible en la UI -->
-               
-
-        </h1>
-        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6">
-            💻 GymApp – Sistema de escritorio profesional para gimnasios
-        </p>
-        <a href="https://wa.me/50585429144" target="_blank"
-            class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold text-lg shadow-lg transition-all duration-300">
-            📞 Escribime al 8542 9144
-        </a>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+        ¡Control total de tu gimnasio
+        <span class="text-green-400">sin internet</span>!
+        <!-- Ícono visible en la UI -->
+      </h1>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6">
+        💻 GymApp – Sistema de escritorio profesional para gimnasios
+      </p>
+      <a
+        href="https://wa.me/50585429144"
+        target="_blank"
+        class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold text-lg shadow-lg transition-all duration-300"
+      >
+        📞 Escribime al 8542 9144
+      </a>
     </section>
 
-    <!-- Características -->
-    <section class="max-w-6xl mx-auto px-4 py-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp">
-            ✅ Funciona sin conexión a internet
+    <!-- Características destacadas de GymApp -->
+    <section class="py-20 bg-black text-white">
+     <h2 class="text-4xl font-extrabold text-center mb-12 bg-clip-text text-transparent 
+           bg-gradient-to-r from-green-600 via-green-500 to-green-600 
+           animate-pulse 
+           drop-shadow-lg">
+           Características destacadas de <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-500 to-green-600">GymApp</span>
+</h2>
+
+
+      <!-- Tarjetas animadas -->
+      <section
+        class="max-w-6xl mx-auto px-4 py-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <div
+          class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp"
+        >
+          ✅ Funciona sin conexión a internet
         </div>
         <div
-            class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-1s">
-            ✅ Alto rendimiento con grandes volúmenes de datos
+          class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-1s"
+        >
+          ✅ Alto rendimiento con grandes volúmenes de datos
         </div>
         <div
-            class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-2s">
-            ✅ Gestión de clientes, asistencias, pagos y productos
+          class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-2s"
+        >
+          ✅ Gestión de clientes, asistencias, pagos y productos
         </div>
         <div
-            class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-3s">
-            ✅ Reportes automáticos y escáner QR integrado
+          class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-3s"
+        >
+          ✅ Reportes automáticos y escáner QR integrado
         </div>
         <div
-            class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-4s">
-            ✅ Tarjeta digital de membresía por cliente
+          class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-4s"
+        >
+          ✅ Tarjeta digital de membresía por cliente
         </div>
         <div
-            class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-5s">
-            ✅ Panel moderno, rápido y fácil de usar
+          class="bg-white/5 p-6 rounded-xl backdrop-blur-sm shadow-md animate__animated animate__fadeInUp animate__delay-5s"
+        >
+          ✅ Panel moderno, rápido y fácil de usar
         </div>
+      </section>
+
+      <!-- Panel de control -->
+      <div class="max-w-4xl mx-auto px-6 space-y-6 text-lg leading-relaxed">
+        <h3 class="text-2xl font-semibold mt-12">
+          📊 Panel de Control Inteligente
+        </h3>
+        <ul class="list-disc list-inside">
+          <li>Vista general de métricas clave:</li>
+          <ul class="list-[circle] pl-6">
+            <li>Miembros activos</li>
+            <li>Nuevos clientes</li>
+            <li>Membresías vencidas</li>
+
+            <li>Renovaciones</li>
+            <li>Pagos pendientes</li>
+            <li>Stock de productos</li>
+          </ul>
+          <li>
+            Ingresos (💵 por semana, mes, trimestre, 6 meses o 1 año tiempo
+            real)
+          </li>
+        </ul>
+
+        <!-- Asistencias -->
+        <h3 class="text-2xl font-semibold mt-10">🎟️ Registro de Asistencias</h3>
+        <ul class="list-disc list-inside">
+          <li>Escaneo rápido con lector de código QR o ID del cliente.</li>
+          <li>Visualización de historial de asistencias por cliente.</li>
+        </ul>
+
+        <!-- Offline -->
+        <h3 class="text-2xl font-semibold mt-10">🔒 Sistema Offline</h3>
+        <ul class="list-disc list-inside">
+          <li>Funciona sin conexión a internet.</li>
+          <li>Base de datos local cifrada.</li>
+          <li>Conexión y estado del sistema visible en todo momento.</li>
+        </ul>
+
+        <!-- Módulos -->
+        <h3 class="text-2xl font-semibold mt-10">🛠️ Módulos Incluidos</h3>
+        <ul class="list-disc list-inside">
+          <li>Panel de control</li>
+          <li>Gestión de clientes</li>
+          <li>Control de productos y stock</li>
+          <li>Registro y seguimiento de pagos</li>
+          <li>Reportes y estadísticas</li>
+          <li>Configuración personalizada</li>
+          <li>Gestión de Asistencias</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Galería -->
+
     <section class="py-16 px-4 bg-gradient-to-b from-black to-gray-900">
-        <h2 class="text-3xl text-center font-bold mb-12">🖼 Vista del Sistema GymApp</h2>
-        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3 max-w-6xl mx-auto">
-            <img src="img/gym1.png" alt="GymApp Vista 1" class="rounded-lg img-glow" />
-            <img src="img/gym2.png" alt="GymApp Vista 2" class="rounded-lg img-glow" />
-            <img src="img/gym3.png" alt="GymApp Vista 3" class="rounded-lg img-glow" />
-            <img src="img/gym4.png" alt="GymApp Vista 4" class="rounded-lg img-glow" />
-            <img src="img/gym5.png" alt="GymApp Vista 5" class="rounded-lg img-glow" />
-            <img src="img/gym6.png" alt="GymApp Vista 6" class="rounded-lg img-glow md:col-span-2" />
+      <h2 class="text-4xl text-center font-bold text-white mb-12">
+        🖼 Demo ampliada del sistema GymApp
+      </h2>
+      <div
+        class="max-w-6xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <div
+          class="image-box cursor-pointer"
+          onclick="openLightbox('img/v1.png')"
+        >
+          <img
+            src="img/v1.png"
+            alt="Vista 1"
+            class="custom-img rounded shadow-md"
+          />
         </div>
+
+        <div
+          class="image-box cursor-pointer"
+          onclick="openLightbox('img/v3.png')"
+        >
+          <img
+            src="img/v3.png"
+            alt="Vista 3"
+            class="custom-img rounded shadow-md"
+          />
+        </div>
+        <div
+          class="image-box cursor-pointer"
+          onclick="openLightbox('img/v4.png')"
+        >
+          <img
+            src="img/v4.png"
+            alt="Vista 4"
+            class="custom-img rounded shadow-md"
+          />
+        </div>
+        <div
+          class="image-box cursor-pointer"
+          onclick="openLightbox('img/v5.png')"
+        >
+          <img
+            src="img/v5.png"
+            alt="Vista 5"
+            class="custom-img rounded shadow-md"
+          />
+        </div>
+        <div
+          class="image-box cursor-pointer"
+          onclick="openLightbox('img/v6.png')"
+        >
+          <img
+            src="img/v6.png"
+            alt="Vista 6"
+            class="custom-img rounded shadow-md"
+          />
+        </div>
+        <div
+          class="image-box cursor-pointer"
+          onclick="openLightbox('img/v8.png')"
+        >
+          <img
+            src="img/v8.png"
+            alt="Vista 8"
+            class="custom-img rounded shadow-md"
+          />
+        </div>
+        <div
+          class="image-box cursor-pointer"
+          onclick="openLightbox('img/v9.png')"
+        >
+          <img
+            src="img/v9.png"
+            alt="Vista 9"
+            class="custom-img rounded shadow-md"
+          />
+        </div>
+        <div
+          class="image-box cursor-pointer"
+          onclick="openLightbox('img/v11.png')"
+        >
+          <img
+            src="img/v11.png"
+            alt="Vista 10"
+            class="custom-img rounded shadow-md"
+          />
+        </div>
+        <div
+          class="image-box cursor-pointer"
+          onclick="openLightbox('img/v12.png')"
+        >
+          <img
+            src="img/v12.png"
+            alt="Vista 7"
+            class="custom-img rounded shadow-md"
+          />
+        </div>
+      </div>
+
+      <!-- Lightbox modal -->
+      <div
+        id="lightbox"
+        class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 hidden z-50"
+      >
+        <button
+          onclick="closeLightbox()"
+          class="absolute top-5 right-5 text-white text-3xl font-bold"
+        >
+          ×
+        </button>
+        <img
+          id="lightbox-img"
+          src=""
+          alt="Imagen ampliada"
+          class="max-h-full max-w-full rounded-lg shadow-lg"
+        />
+      </div>
     </section>
 
+    <!-- Video Demo -->
+    <!--
+    
+     <section
+      class="py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-center px-4"
+    >
+      <h2 class="text-4xl font-bold mb-6">🎥 Demo del Sistema en Acción</h2>
+      <p class="text-lg mb-8 max-w-3xl mx-auto">
+        Mira cómo funciona GymApp en un entorno real. Control de clientes,
+        pagos, asistencias y mucho más desde tu escritorio, sin internet.
+      </p>
+      <div
+        class="relative max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-green-500"
+      >
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/TU_VIDEO_ID"
+          title="Demo GymApp"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </section>
 
+    -->
+
+    <!-- FAQ -->
+    <section class="py-20 bg-black text-white px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">
+        ❓ Preguntas Frecuentes sobre GymApp
+      </h2>
+      <div id="faq" class="max-w-4xl mx-auto space-y-4">
+        <!-- Pregunta 1 (abierta por defecto) -->
+        <div class="bg-white/5 rounded-xl overflow-hidden shadow-md">
+          <button
+            class="w-full text-left p-6 focus:outline-none faq-toggle"
+            data-index="0"
+          >
+            <h3 class="text-xl font-semibold text-green-400">
+              ¿GymApp necesita internet para funcionar?
+            </h3>
+          </button>
+          <div class="faq-content p-6 pt-0 block">
+            <p>
+              GymApp está diseñado para funcionar completamente sin conexión a
+              internet. Toda la información se guarda de forma segura en una
+              base de datos local, directamente en tu computadora, sin necesidad
+              de servidores externos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Preguntas siguientes (cerradas) -->
+        <div class="bg-white/5 rounded-xl overflow-hidden shadow-md">
+          <button
+            class="w-full text-left p-6 focus:outline-none faq-toggle"
+            data-index="1"
+          >
+            <h3 class="text-xl font-semibold text-green-400">
+              ¿Qué incluye el sistema?
+            </h3>
+          </button>
+          <div class="faq-content p-6 pt-0 hidden">
+            <p>
+              Gestión de clientes, control de asistencias, pagos, productos,
+              reportes automáticos, lector QR, membresías digitales, soporte,
+              tarjeta digital de membresía por cliente, soporte personalizado y
+              más.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 rounded-xl overflow-hidden shadow-md">
+          <button
+            class="w-full text-left p-6 focus:outline-none faq-toggle"
+            data-index="2"
+          >
+            <h3 class="text-xl font-semibold text-green-400">
+              ¿Funciona en cualquier computadora?
+            </h3>
+          </button>
+          <div class="faq-content p-6 pt-0 hidden">
+            <p>
+              Sí, No requiere internet ni configuraciones técnicas. Es instalar
+              y comenzar a trabajar.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 rounded-xl overflow-hidden shadow-md">
+          <button
+            class="w-full text-left p-6 focus:outline-none faq-toggle"
+            data-index="3"
+          >
+            <h3 class="text-xl font-semibold text-green-400">
+              ¿Puedo personalizar el sistema con el logo de mi gimnasio?
+            </h3>
+          </button>
+          <div class="faq-content p-6 pt-0 hidden">
+            <p>
+              Sí. El sistema permite personalizar el nombre, logotipo, teléfono
+              y dirección para adaptarlo a la imagen de tu gimnasio. Esta
+              personalización puede ser realizada por ti mismo tras adquirir el
+              sistema.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 rounded-xl overflow-hidden shadow-md">
+          <button
+            class="w-full text-left p-6 focus:outline-none faq-toggle"
+            data-index="4"
+          >
+            <h3 class="text-xl font-semibold text-green-400">
+              ¿Tiene algún costo mensual?
+            </h3>
+          </button>
+          <div class="faq-content p-6 pt-0 hidden">
+            <p>
+              No. El sistema se vende con una licencia única por instalación,
+              sin pagos mensuales. El soporte es totalmente opcional y tiene un
+              costo accesible solo si lo necesitas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Nuevas preguntas -->
+        <div class="bg-white/5 rounded-xl overflow-hidden shadow-md">
+          <button
+            class="w-full text-left p-6 focus:outline-none faq-toggle"
+            data-index="5"
+          >
+            <h3 class="text-xl font-semibold text-green-400">
+              ¿Puedo registrar asistencias con lector de código QR?
+            </h3>
+          </button>
+          <div class="faq-content p-6 pt-0 hidden">
+            <p>
+              Sí. GymApp incluye soporte para lectores QR que permiten registrar
+              la asistencia del cliente al escanear su código de membresía.
+              También podés registrar la asistencia manualmente ingresando el
+              identificador único (ID) del cliente.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 rounded-xl overflow-hidden shadow-md">
+          <button
+            class="w-full text-left p-6 focus:outline-none faq-toggle"
+            data-index="6"
+          >
+            <h3 class="text-xl font-semibold text-green-400">
+              ¿Qué pasa si mi computadora se apaga o se daña?
+            </h3>
+          </button>
+          <div class="faq-content p-6 pt-0 hidden">
+            <p>
+              No hay problema si la computadora se apaga: toda la información se
+              guarda automáticamente en la base de datos local y permanece
+              segura. Aunque es muy poco común que una computadora se dañe,
+              recomendamos realizar copias de seguridad periódicas para mayor
+              tranquilidad. Lo ideal es guardar estos respaldos en una memoria
+              USB u otro dispositivo externo. En caso de cualquier
+              inconveniente, si contás con un respaldo, podemos ayudarte a
+              restaurar tu información fácilmente.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 rounded-xl overflow-hidden shadow-md">
+          <button
+            class="w-full text-left p-6 focus:outline-none faq-toggle"
+            data-index="7"
+          >
+            <h3 class="text-xl font-semibold text-green-400">
+              ¿Puedo exportar e importar reportes?
+            </h3>
+          </button>
+          <div class="faq-content p-6 pt-0 hidden">
+            <p>
+              Sí. Puedes exportar e importar reportes de clientes en formato
+              Excel. Además, el sistema cuenta con una plantilla Excel
+              descargable que puedes utilizar para importar datos fácilmente y
+              sin errores. Esto agiliza el proceso de carga masiva y asegura que
+              los formatos sean correctos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="p-6">
+      <div
+        class="relative bg-gradient-to-r from-green-600/30 to-green-500/40 border-2 border-green-400 rounded-xl shadow-[0_0_15px_3px_rgba(34,197,94,0.4)] p-8 backdrop-blur-md animate__animated animate__fadeInUp animate__delay-6s max-w-lg mx-auto"
+      >
+        <!-- Título -->
+        <h3
+          class="text-2xl font-extrabold text-green-200 flex items-center gap-3 drop-shadow-md"
+        >
+          <i class="fas fa-qrcode text-green-400 text-3xl animate-pulse"></i>
+          Registro de asistencias con QR o ID
+        </h3>
+
+        <!-- Descripción -->
+        <p
+          class="mt-3 text-green-100/90 text-lg leading-relaxed drop-shadow-sm"
+        >
+          Escaneá el <strong class="text-green-300">código QR</strong> o ingresá
+          el <strong class="text-green-300">ID único</strong> del cliente para
+          registrar la asistencia de forma rápida, precisa y segura.
+        </p>
+      </div>
+    </div>
     <!-- CTA Final -->
     <section class="text-center py-20 bg-gradient-to-r from-gray-900 to-black">
-        <h3 class="text-3xl font-bold mb-4">💰 Licencia única por instalación</h3>
-        <p class="mb-3 text-lg">🔧 Soporte, actualizaciones y personalización disponibles</p>
-        <p class="mb-6 text-lg">⚡️ Ideal para gimnasios, box, academias y centros fitness</p>
-        <a href="https://wa.me/50585429144" target="_blank"
-            class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold text-lg shadow-lg transition">
-            💬 ¡Contactame por WhatsApp!
-        </a>
+      <h3 class="text-3xl font-bold mb-4">💰 Licencia única por instalación</h3>
+      <p class="mb-3 text-lg">
+        🔧 Soporte, actualizaciones y personalización disponibles
+      </p>
+      <p class="mb-6 text-lg">
+        ⚡️ Ideal para gimnasios, box, academias y centros fitness
+      </p>
+      <a
+        href="https://wa.me/50585429144"
+        target="_blank"
+        class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold text-lg shadow-lg transition"
+      >
+        💬 ¡Contactame por WhatsApp!
+      </a>
     </section>
 
     <!-- Botón WhatsApp fijo -->
-    <a href="https://wa.me/50585429144" target="_blank"
-        class="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg z-50 animate__animated animate__bounceIn">
-        💬 WhatsApp
+    <a
+      href="https://wa.me/50585429144"
+      target="_blank"
+      class="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg z-50 animate__animated animate__bounceIn"
+    >
+      💬 WhatsApp
     </a>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z17G71B2J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1Z17G71B2J"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-1Z17G71B2J');
-</script>
+      gtag("config", "G-1Z17G71B2J");
+    </script>
+  </body>
 
-</body>
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").classList.remove("hidden");
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.add("hidden");
+    }
+  </script>
 
+  <script>
+    const toggles = document.querySelectorAll(".faq-toggle");
+    const contents = document.querySelectorAll(".faq-content");
+
+    toggles.forEach((toggle, i) => {
+      toggle.addEventListener("click", () => {
+        contents.forEach((content, j) => {
+          if (i === j) {
+            content.classList.toggle("hidden");
+          } else {
+            content.classList.add("hidden");
+          }
+        });
+      });
+    });
+  </script>
 </html>
