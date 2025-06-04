@@ -33,11 +33,8 @@ Esta landing fue desarrollada con:
 
 ---
 
-## 🖼 Capturas del sistema
+ 
 
-La página incluye 6 capturas del sistema (`gym1.png` hasta `gym6.png`) mostrando su diseño profesional e interfaz amigable.
-
----
 
 ## 📞 Contacto
 
